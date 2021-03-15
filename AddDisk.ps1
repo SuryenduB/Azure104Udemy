@@ -3,14 +3,15 @@ $location          = "westus"
 $provisioningState = "Succeeded"
 $machineName = "az104linux"
 $storageTpe = 'Standard_LRS'
-$dataDiskName = 'az104disk'
+$dataDiskName = 'az104disk1'
 $dataDiskSize = 20
 
 
-$dataDiskConfig = New-Az
+$vm = Get-AzVm -Name $machineName -ResourceGroupName $resourceGroupName
 
 $dataDiskConfig = New-AzDiskConfig -SkuName Standard_LRS -Location $location -CreateOption Empty -DiskSizeGB $dataDiskSize
 $dataDisk01 = New-AzDisk -DiskName $dataDiskName -Disk $dataDiskConfig -ResourceGroupName $resourceGroupName
-$vm = Get-AzVm -Name $machineName -ResourceGroupName $resourceGroupName
+Add-AzVMDataDisk -VM $vm -Name $dataDiskName -CreateOption Attach -ManagedDiskId $dataDisk01.Id -Lun 01
+
 
 Update-AzVm -Vm $vm -ResourceGroupName $resourceGroupName
