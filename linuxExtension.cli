@@ -1,1 +1,1 @@
-az vm extension set --resource-group azuredemo --vm-name linuxvm --name customScript --publisher Microsoft.Azure.Extensions --settings customscript.json
+az vm extension set --name customScript --publisher Microsoft.Azure.Extensions --vm-name az104vmlinux --resource-group AZ104VMLINUX_GROUP --settings customScript.json
