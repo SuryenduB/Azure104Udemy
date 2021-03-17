@@ -1,4 +1,4 @@
 {
-  "fileUris": ["https://raw.githubusercontent.com/alashro/sampleweb/master/install_web.sh"],
+  "fileUris": ["https://raw.githubusercontent.com/SuryenduB/Azure104Udemy/main/install_web.sh1"],
   "commandToExecute": "./install_web.sh"
 }
