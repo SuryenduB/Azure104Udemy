@@ -1,1 +1,3 @@
-az vmss create -n appvmset -g azuredemo --instance-count 1 --image Win2016Datacenter --data-disk-sizes-gb 10 --vnet-name azuredemo-vnet --subnet default --public-ip-per-vm --admin-username demousr
+az vmss create -n az104avs2 -g learn-file-sync-rg --l JapanEast --instance-count 1 --image Win2016Datacenter --data-disk-sizes-gb 10 --vnet-name learnfilesyncrgvnet779 --subnet default --public-ip-per-vm --admin-username az104
+
+az vmss create -n az104avs2 -g learn-file-sync-rg --location JapanEast --instance-count 1 --image Win2016Datacenter --data-disk-sizes-gb 10 --vnet-name learnfilesyncrgvnet779 --subnet default --public-ip-per-vm --admin-username az104
