@@ -1,1 +1,1 @@
-az container create --resource-group test-grp --file deployment.yml
+az container create --resource-group learn-file-sync-rg --file deployment.yml
