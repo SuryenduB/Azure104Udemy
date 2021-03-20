@@ -1,11 +1,11 @@
 apiVersion: 2019-12-01
-location: eastus
-name: demogroup
+location: centralindia
+name: az104demogroup
 properties:
   containers:
-  - name: demoapp
+  - name: az104demoapp
     properties:
-      image: nginx
+      image: httpd:2.4.46
       resources:
         requests:
           cpu: 1
